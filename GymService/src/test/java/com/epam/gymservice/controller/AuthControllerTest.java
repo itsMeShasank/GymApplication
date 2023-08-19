@@ -24,8 +24,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-//@SpringBootTest
-//@AutoConfigureMockMvc
 @WebMvcTest(AccountController.class)
 class AuthControllerTest {
 
@@ -63,7 +61,7 @@ class AuthControllerTest {
 
     @Test
     void userLoginWithMethodArgumentNotValidExceptionTest() throws Exception {
-        Mockito.when(accountService.validateUser(any(CredentialsDetails.class))).thenReturn(false);
+
         mockMvc.perform(post("/gym-service/login")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(new ObjectMapper().writeValueAsString(new CredentialsDetails())))
@@ -72,7 +70,6 @@ class AuthControllerTest {
 
     @Test
     void updatePasswordTest() throws Exception {
-        Mockito.when(accountService.updateUser(modifyCredentials)).thenReturn(true);
         mockMvc.perform(put("/gym-service/update-password")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(new ObjectMapper().writeValueAsString(modifyCredentials)))
