@@ -114,7 +114,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>${project.groupId}/Authentication-service:${project.version}</name>
+                        <name>${project.groupId}/authentication-service:${project.version}</name>
                     </image>
                 </configuration>
                 <executions>

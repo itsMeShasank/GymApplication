@@ -67,7 +67,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>${project.groupId}/Gateway-server:${project.version}</name>
+						<name>${project.groupId}/gateway-server:${project.version}</name>
 					</image>
 				</configuration>
 				<executions>
