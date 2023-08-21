@@ -1,5 +1,6 @@
 package com.epam.gymservice;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
@@ -11,8 +12,8 @@ import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfigurati
 @EnableAutoConfiguration(exclude = {KafkaAutoConfiguration.class, DataSourceAutoConfiguration.class, EurekaClientAutoConfiguration.class, EurekaDiscoveryClientConfiguration.class})
 class GymServiceApplicationTests {
 
-//    @Test
-//    void contextLoads() {
-//    }
+    @Test
+    void contextLoads() {
+    }
 
 }

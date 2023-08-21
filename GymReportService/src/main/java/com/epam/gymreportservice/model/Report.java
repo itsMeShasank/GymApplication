@@ -13,7 +13,7 @@ import java.util.Map;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "training-Reports")
+@Document(collection = "training-reports")
 public class Report {
 
     @Id

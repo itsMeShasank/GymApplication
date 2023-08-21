@@ -46,7 +46,6 @@ public class TrainingReportServiceImpl implements TrainingReportService{
 
         Report reportDetails = trainingReportRepository.save(report);
         log.info(SERVICE_METHOD_EXITED,"generateTrainingReport");
-        //modelMapper.map(reportDetails,TrainingReportResponse.class);
         return setValuesToReportResponse(reportDetails);
     }
 
